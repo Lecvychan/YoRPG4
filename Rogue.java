@@ -1,9 +1,3 @@
-//Lecvy Chan
-//11.14.2013
-//9844
-//HW #25
-
-
 
 public abstract class Rogue extends Character{ 
 
