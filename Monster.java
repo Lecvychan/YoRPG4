@@ -28,12 +28,15 @@ public class Monster extends Character {
 	_strength = 20 + (int)( Math.random() * 45 ); // [20,65)
 	_defense = 20;
 	_attack = 1;
+	_accuracy = 40 + (int)(Math.random() *45);
+
     }
 
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public String getName() { 
 	return "Nameless MONSTARRR. Roar, snarl, hiss!"; 
     }
+public int getHealth () {return _hitPts;}
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     

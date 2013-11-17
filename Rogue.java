@@ -14,6 +14,7 @@ public abstract class Rogue extends Character{
 	_strength = 100;
 	_defense = 30;
 	_attack = .6;
+	_accuracy = 70;
     }
 
     public Rogue (String name) {
@@ -21,14 +22,15 @@ public abstract class Rogue extends Character{
 	_name = name;
     }
 
-    public Rogue (String setname, int sethp, int setstrength, int setdefense, double setad) {
+    public Rogue (String setname, int sethp, int setstrength, int setdefense, double setad, int setaccuracy) {
 	_name = setname;
 	_hitPts = sethp;
 	_strength = setstrength;
 	_defense = setdefense;
 	_attack = setad;
+	_accuracy = setaccuracy;
     }
-
+public int getHealth () {return _hitPts;}
     public String getName () {
 	return _name;
     }
@@ -42,6 +44,11 @@ public abstract class Rogue extends Character{
 	    _defense = 30;
 	    _attack = .6;
 	  	}
+
+
+
+
+
     public static String about () {
 	return "Silent Killer. Utilizes targetted hits to deal heavy damage, while wearing lighter armor to move faster.";
     }

@@ -14,6 +14,7 @@ public abstract class Character {
     protected int _hitPts;
     protected int _strength;
     protected int _defense;
+    protected int _accuracy;
     protected double _attack;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -28,16 +29,22 @@ public abstract class Character {
 	_strength = 100;
 	_defense = 40;
 	_attack = .4;
+	_accuracy = 10;
     }
 
 
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public int getDefense() { return _defense; }
-
+ 
+// ABSTRACT TO GET HEALTH
+    public abstract int getHealth();
+    
     public abstract String getName();
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     
+
+
     /*=============================================
       boolean isAlive() -- tell whether I am alive
       post: returns boolean indicated alive or dead
@@ -76,6 +83,13 @@ public abstract class Character {
     public void lowerHP( int damageInflicted ) {
 	_hitPts = _hitPts - damageInflicted;
     }
+
+//METHOD TO USE POTION
+    public void usePotion (){
+	_hitPts = _hitPts + 50;
+    }
+ 
+ 
 
 
     /*=============================================

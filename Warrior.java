@@ -27,6 +27,7 @@ public class Warrior extends Character {
 	_strength = 100;
 	_defense = 40;
 	_attack = .4;
+	_accuracy = 0;
     }
 
 
@@ -43,9 +44,10 @@ public class Warrior extends Character {
 
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public String getName() { return _name; }
+public int getHealth () {return _hitPts;}
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    
+ 
     //prepare a Warrior for a special attack
     public void specialize() {
 	_attack = .75;
@@ -58,6 +60,7 @@ public class Warrior extends Character {
 	_defense = 40;
     }
 
+ 
 
     public static String about() {
 	return "Mighty Warrior from a bygone era. Swinger of huge sword, slayer of huger monsters. Like to smash? This is you.";

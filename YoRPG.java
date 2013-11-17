@@ -109,11 +109,14 @@ public class YoRPG {
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
-
-		if ( i == 2 )
+		if ( i == 2 ){
 		    pat.specialize();
-		else
+		  
+		}
+		else{
 		    pat.normalize();
+	
+		}
 
 		d1 = pat.attack( smaug );
 		d2 = smaug.attack( pat );
@@ -123,7 +126,15 @@ public class YoRPG {
 
 		System.out.println( "Ye Olde Monster hit back for " + d2 +
 				    " points of damage.");
-	    }//end while
+		System.out.println ("Your Health: " + pat.getHealth() + "\nMonster's Health: " + smaug.getHealth());
+		try {	System.out.println( "Use potion?" );
+		System.out.println( "\t1: Nay.\n\t2: Aye!" );
+		i = Integer.parseInt( in.readLine() );
+		}
+	catch ( IOException e ) { }
+		if ( i == 2) 
+		    pat.usePotion();
+		    }//end while
 
 	    //option 1: you & the monster perish
 	    if ( !smaug.isAlive() && !pat.isAlive() ) {
